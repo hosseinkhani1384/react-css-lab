@@ -1,5 +1,6 @@
 import React from "react";
 import Myswap from "./Myswap";
+import SplitText from "./SplitText";
 
 export default function Topnavbar() {
   return (
@@ -49,20 +50,33 @@ export default function Topnavbar() {
                 <a>Contact</a>
               </li>
               <ul className="flex justify-center gap-3">
-              <li>
-                <button className="btn w-full">Log in</button>
-              </li>
-              <li>
-                <button className="btn btn-neutral w-full">Sign in</button>
-              </li>
+                <li>
+                  <button className="btn w-full">Log in</button>
+                </li>
+                <li>
+                  <button className="btn btn-neutral w-full">Sign in</button>
+                </li>
               </ul>
-
             </ul>
           </div>
 
-          <span className="font-bold text-2xl hidden lg:inline">Tailwind</span>
-          <span className="ml-1 text-2xl hidden lg:inline">CSS</span>
-          <Myswap isshow={true}/>
+          <div className="lg:inline hidden">
+
+          <SplitText
+            text="Tailwind CSS"
+            className="text-2xl font-semibold text-center"
+            delay={100}
+            duration={0.3}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+          />
+          </div>
+          <Myswap isshow={true} />
         </div>
 
         <div className="navbar-center hidden lg:flex gap-10">
@@ -98,7 +112,7 @@ export default function Topnavbar() {
           <span className="ml-1 text-2xl lg:hidden">CSS</span>
           <button className="btn lg:block hidden">Log in</button>
           <button className="btn btn-neutral lg:block hidden">Sign in</button>
-          <Myswap isshow={false}/>
+          <Myswap isshow={false} />
         </div>
       </div>
     </header>

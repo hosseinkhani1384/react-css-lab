@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Card_Section2({ srcimg ,header,description}) {
   return (
-    <div className="p-10 hover:shadow-xl mb-10 flex gap-2 transition-all duration-300">
+    <div className="p-10 mb-10 flex gap-2 ">
       <div>
         <img src={srcimg} alt="" className="w-36" />
       </div>
